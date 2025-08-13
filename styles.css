@@ -1,5 +1,5 @@
-/* Quick Professional Enhancement CSS */
-/* Add this as styles.css to your repository */
+
+    /* Professional Blue Header Design - Matching Your Current Site */
 
 * {
     margin: 0;
@@ -14,40 +14,87 @@ body {
     background: #f8fafc;
 }
 
-/* Professional Header */
+/* Professional Blue Header - Matching Your Design */
 .header {
-    background: #f8fafc;
-    color: #333;
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
     padding: 4rem 2rem;
     text-align: center;
     margin-bottom: 0;
-    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 100%);
+}
+
+/* Profile Photo - Circular Design */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 2rem auto;
+    display: block;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
 }
 
 .header h1 {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: #2d3748;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    color: white;
 }
 
 .header .subtitle {
     font-size: 1.3rem;
-    opacity: 0.8;
+    opacity: 0.95;
     font-weight: 300;
-    color: #4a5568;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-/* Profile Photo */
-.profile-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 0 auto 2rem auto;
-    display: block;
-    border: 4px solid #667eea;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-    object-fit: cover;
+/* Navigation Menu */
+.nav-menu {
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4a90e2;
+    background: rgba(74, 144, 226, 0.1);
 }
 
 /* Container for content */
@@ -77,7 +124,7 @@ h2 {
     font-size: 2.2rem;
     color: #2d3748;
     margin-bottom: 2rem;
-    border-bottom: 3px solid #667eea;
+    border-bottom: 3px solid #4a90e2;
     padding-bottom: 0.5rem;
     font-weight: 600;
 }
@@ -86,6 +133,13 @@ h3 {
     font-size: 1.4rem;
     color: #4a5568;
     margin: 2rem 0 1rem 0;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #4a90e2;
+    margin: 1rem 0 0.5rem 0;
     font-weight: 600;
 }
 
@@ -99,30 +153,48 @@ h3 {
 
 .expertise-item {
     padding: 1.5rem;
-    background: #f7fafc;
-    border-radius: 8px;
-    border-left: 4px solid #667eea;
-    transition: all 0.2s ease;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border-radius: 10px;
+    border-left: 4px solid #4a90e2;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.expertise-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(53, 122, 189, 0.1));
+    transition: left 0.3s ease;
+}
+
+.expertise-item:hover::before {
+    left: 0;
 }
 
 .expertise-item:hover {
-    background: #edf2f7;
-    transform: translateX(5px);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.2);
 }
 
 /* Publications Styling */
 .publication {
-    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
     padding: 2rem;
     margin: 1.5rem 0;
-    border-radius: 10px;
-    border-left: 5px solid #48bb78;
-    transition: all 0.2s ease;
+    border-radius: 12px;
+    border-left: 5px solid #4a90e2;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .publication:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 40px rgba(74, 144, 226, 0.15);
 }
 
 /* Book Cover Styling */
@@ -132,31 +204,37 @@ img {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     margin: 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
 }
 
 /* Links */
 a {
-    color: #667eea;
+    color: #4a90e2;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #5a67d8;
+    color: #357abd;
     text-decoration: underline;
 }
 
 /* Contact Section Enhancement */
 .contact-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
     color: white;
     text-align: center;
+    margin-top: 4rem;
 }
 
 .contact-section h2 {
     color: white;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .contact-grid {
@@ -167,15 +245,16 @@ a:hover {
 }
 
 .contact-item {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.15);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 12px;
     backdrop-filter: blur(10px);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-item:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.25);
     transform: translateY(-5px);
 }
 
@@ -192,32 +271,68 @@ a:hover {
 /* Call-to-Action Buttons */
 .cta-button {
     display: inline-block;
-    background: #48bb78;
+    background: linear-gradient(135deg, #48bb78, #38a169);
     color: white;
     padding: 1rem 2rem;
     border-radius: 50px;
     font-weight: 600;
     margin: 1rem 0.5rem;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .cta-button:hover {
-    background: #38a169;
+    background: linear-gradient(135deg, #38a169, #2f855a);
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4);
     text-decoration: none;
     color: white;
 }
 
+/* Media mentions styling */
+.media-item {
+    background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 20%, #fff7ed 100%);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border-left: 4px solid #f97316;
+    transition: all 0.3s ease;
+}
+
+.media-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(249, 115, 22, 0.2);
+}
+
+/* Status indicators */
+.status-current {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     
     .header .subtitle {
         font-size: 1.1rem;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
     }
     
     .container {
@@ -248,6 +363,12 @@ a:hover {
         text-align: center;
         margin: 0.5rem 0;
     }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
 }
 
 /* Smooth Scrolling */
@@ -275,6 +396,7 @@ html {
 p {
     margin-bottom: 1rem;
     line-height: 1.7;
+    color: #4a5568;
 }
 
 /* Enhanced list styling */
@@ -287,23 +409,10 @@ li {
     margin-bottom: 0.5rem;
 }
 
-/* Status indicators */
-.status-current {
-    background: #48bb78;
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-left: 1rem;
-}
-
-/* Media mentions styling */
-.media-item {
-    background: #f7fafc;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    border-radius: 6px;
-    border-left: 3px solid #ed8936;
+/* Gradient text effects */
+.gradient-text {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
